@@ -8959,7 +8959,7 @@
 	)
 	(symbol
 		(lib_id "Display_Character:WC1602A")
-		(at 265.43 81.28 0)
+		(at 270.51 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8968,7 +8968,7 @@
 		(fields_autoplaced yes)
 		(uuid "c82ac906-c16e-4b7d-9fa6-532b7b96b715")
 		(property "Reference" "DS1"
-			(at 267.5733 58.42 0)
+			(at 272.6533 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,7 +8977,7 @@
 			)
 		)
 		(property "Value" "WC1602A"
-			(at 267.5733 60.96 0)
+			(at 272.6533 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8986,7 +8986,7 @@
 			)
 		)
 		(property "Footprint" "Display:WC1602A"
-			(at 265.43 104.14 0)
+			(at 270.51 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8996,7 +8996,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf"
-			(at 283.21 81.28 0)
+			(at 288.29 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,7 +9005,7 @@
 			)
 		)
 		(property "Description" "LCD 16x2 Alphanumeric , 8 bit parallel bus, 5V VDD"
-			(at 265.43 81.28 0)
+			(at 270.51 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
