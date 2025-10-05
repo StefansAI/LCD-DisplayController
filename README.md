@@ -6,14 +6,14 @@
 </div>
 <br>
 The <a href="https://github.com/StefansAI/TTL-6510-Computer">TTL 6510 computer.</a> was designed with connectors for plugging in <a href="https://github.com/StefansAI/HexDisplayController">HexDisplayControllers</a> for displaying register contents etc. Originally these hex displays were used for the micro code steps, instruction register and micro code outputs. Instead of looking up the meaning of instruction codes or the micro code bit group meanings, I decided to switch to multi line displays I had laying around.<br>
-The instruction code and micro step counter can be desiplayed on a 2 line LCD text display module, while the 4 micro step signal groups can better be displayed on a 4 line LCD text display module. 
+The instruction code and micro step counter can be displayed on a 2 line LCD text display module, while the 4 micro step signal groups can better be displayed on a 4 line LCD text display module. 
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/schematics_direct.png" />
 </div>
 <br>
-Both modules can be interfaced in the same way, so the schematics for both can be the same. There are two 8-bit ports to read in from. Since the Arduino processor doesn't have enough pins for both, they are multiplexd to one 8-bit bus.<br>
+Both modules can be interfaced in the same way, so the schematics for both can be the same. There are two 8-bit ports to read in from. Since the Arduino processor doesn't have enough pins for both, they are multiplexed to one 8-bit bus.<br>
 The LCD module is connected via 4 bit databus as in the example codes for the the Arduino. Then it only needs the resistor for the back light and a potentiometer for the contrast.<br>
 <br>
 <br>
