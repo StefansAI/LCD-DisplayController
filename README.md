@@ -22,14 +22,14 @@ The LCD module is connected via 4 bit databus as in the example codes for the th
 </div>
 <br>
 The boards in the picture above are hand wired, but to make it nicer and repeatable there needs to be a PCB layout for both cases. The two LCD modules 16x2 and 20x4 have different dimensions and so I changed the design for 2 connectors in parallel, one to be used for the 16x2 module and the other to be used by the 20x4 module.<br>
-Another 4-bit header was added to include reading in more bits that are currently wired to single LEDs on the side of the <a href="https://github.com/StefansAI/TTL-6510-Computer">TTL 6510 computer</a> board Rev A. Rev B will be routed to those headers.
+Another 4-bit header was added to include reading in more bits that are currently wired to single LEDs on the side of the <a href="https://github.com/StefansAI/TTL-6510-Computer">TTL 6510 computer</a> board Rev A. Rev B is now routed to those headers.
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/layout.png" />
 </div>
 <br>
-The layout is made to plug in the two different sizes of LCD modules and to break off the part only needed for the larger module. It has not been turned into an assembly yet, since I'm still working on the Rev B layout for the <a href="https://github.com/StefansAI/TTL-6510-Computer">TTL 6510 computer.</a>
+The layout is made to plug in the two different sizes of LCD modules and to break off the part only needed for the larger module. The PCB had been made at <a href="www.PCBway.com">PCBway.</a>
 <br>
 <br>
 <div style="text-align: center;">
@@ -45,4 +45,3 @@ Similar to the <a href="https://github.com/StefansAI/HexDisplayController">HexDi
 <br>
 The second screenshot shows string definitions for the micro code output signals.<br>
 <br><br>
-The PCB had been made at <a href="www.PCBway.com">PCBway.</a>
