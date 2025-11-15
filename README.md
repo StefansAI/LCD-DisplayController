@@ -43,4 +43,6 @@ Similar to the <a href="https://github.com/StefansAI/HexDisplayController">HexDi
   <img src="docs/assets/images/microcode_out.png" />
 </div>
 <br>
-The second screenshot shows string definitions for the micro code output signals.
+The second screenshot shows string definitions for the micro code output signals.<br>
+<br><br>
+The PCB had been made at <a href="www.PCBway.com">PCBway.</a>

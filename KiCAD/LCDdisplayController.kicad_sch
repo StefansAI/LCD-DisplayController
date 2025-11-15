@@ -6418,7 +6418,7 @@
 				(hide yes)
 			)
 		)
-		(property "OrderInfo" "https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC061LFBN-RC/810145"
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/metz-connect-usa-inc/PR20206VBNN/12342874"
 			(at 204.47 90.17 0)
 			(effects
 				(font
@@ -6698,6 +6698,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61301611821/6137797"
+			(at 209.55 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "dd08b1ac-345d-4365-9b0b-3a8c672079fa")
 		)
@@ -6807,12 +6816,13 @@
 				(hide yes)
 			)
 		)
-		(property "OrderInfo" ""
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/harwin-inc/M20-9771146/3920928"
 			(at 27.94 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "9"
@@ -8164,6 +8174,15 @@
 				(hide yes)
 			)
 		)
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/bourns-inc/PV37W103C01B00/666597"
+			(at 161.29 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "e17fdba7-307a-4dd7-ae00-164fc4a8243e")
 		)
@@ -8907,12 +8926,13 @@
 				(hide yes)
 			)
 		)
-		(property "OrderInfo" ""
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/harwin-inc/M20-9771146/3920928"
 			(at 27.94 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(pin "9"
@@ -8959,7 +8979,7 @@
 	)
 	(symbol
 		(lib_id "Display_Character:WC1602A")
-		(at 270.51 139.7 0)
+		(at 265.43 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -8968,7 +8988,7 @@
 		(fields_autoplaced yes)
 		(uuid "c82ac906-c16e-4b7d-9fa6-532b7b96b715")
 		(property "Reference" "DS1"
-			(at 272.6533 116.84 0)
+			(at 267.5733 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,7 +8997,7 @@
 			)
 		)
 		(property "Value" "WC1602A"
-			(at 272.6533 119.38 0)
+			(at 267.5733 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8986,7 +9006,7 @@
 			)
 		)
 		(property "Footprint" "Display:WC1602A"
-			(at 270.51 162.56 0)
+			(at 265.43 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8996,7 +9016,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf"
-			(at 288.29 139.7 0)
+			(at 283.21 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9005,7 +9025,25 @@
 			)
 		)
 		(property "Description" "LCD 16x2 Alphanumeric , 8 bit parallel bus, 5V VDD"
-			(at 270.51 139.7 0)
+			(at 265.43 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderInfo" "https://www.amazon.com/gp/product/B0BFDGTPBP/ref=ox_sc_act_title_1?smid=A2RJ79XBQX6W3M&th=1"
+			(at 265.43 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderInfo2" "https://www.amazon.com/dp/B0BFDDZ49T?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1"
+			(at 265.43 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9671,6 +9709,15 @@
 			)
 		)
 		(property "Description" "8-bit Latch 3-state outputs"
+			(at 58.42 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "OrderInfo" "https://www.digikey.com/en/products/detail/texas-instruments/CD74HCT573E/38717 "
 			(at 58.42 163.83 0)
 			(effects
 				(font
