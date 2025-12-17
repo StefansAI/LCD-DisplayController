@@ -1,6 +1,26 @@
 // include the library code:
 #include <LiquidCrystal.h>
 
+// Input data pin definition array
+const int DIN[8] = { 0, 1, 2, 3, 4, 5, 6, 7 }; 
+
+// Pin definition for the additional input 0
+const int IN[4] = {A0, A1, A2, A3 };
+
+// LCD data output pins
+const int LCD_D[4] = { 8, 9, 10, 11 };
+
+// LCD enable pin
+const int LCD_E = 12;
+// LCD rs pin
+const int LCD_RS = 13;
+
+LiquidCrystal lcd(LCD_RS, LCD_E, LCD_D[0], LCD_D[1], LCD_D[2], LCD_D[3]);
+
+// Input buffer enable
+const int OE[2] = { 18, 19 };
+
+
 //#include "Mnemonics.c"
 char* Mnemonic[] = {
 	"BRK",
@@ -263,33 +283,10 @@ char* Mnemonic[] = {
 };
 
 
-
-// Input data pin definition array
-const int DIN[8] = { 0, 1, 2, 3, 4, 5, 6, 7 }; 
-
-// Pin definition for the additional input 0
-const int IN0 = 14;
-// Pin definition for the additional input 1
-const int IN1 = 15;
-
-// LCD data output pins
-const int LCD_D[4] = { 8, 9, 10, 11 };
-
-// LCD enable pin
-const int LCD_E = 12;
-// LCD rs pin
-const int LCD_RS = 13;
-
-// Input buffer enable
-const int IN_EN[2] = { 16, 17 };
-
-
-LiquidCrystal lcd(LCD_RS, LCD_E, LCD_D[0], LCD_D[1], LCD_D[2], LCD_D[3]);
-
 // Query all data input bits and return the 8bit data value read from the input chip.
 int get_data(int idx)
 {
-	digitalWrite(IN_EN[idx], LOW);
+	digitalWrite(OE[idx], LOW);
 
   int result=0;
   for (int i=0; i<8; i++)
@@ -299,7 +296,7 @@ int get_data(int idx)
       result += 1<<i;    
   }
 
-	digitalWrite(IN_EN[idx], HIGH);
+	digitalWrite(OE[idx], HIGH);
   return result;
 }
 
@@ -324,28 +321,26 @@ void write_hex(int x, int y, int code)
 // Variable to capture the input data from the 74HCT574 or 74HCT573
 int opcode = 0;
 int microstep = 0;
-
+int flags = 0;
 
 
 // Initialization function called before the loop
 void setup() {
 	// put your setup code here, to run once:
-
-  pinMode(IN0, INPUT);
-  pinMode(IN1, INPUT);
-
+	for (int i = 0; i<4; i++)
+ 		pinMode(IN[i], INPUT);
+ 
 	for (int i = 0; i<8; i++)
   	pinMode(DIN[i], INPUT);
 
   for (int i=0; i<2; i++)
 	{
-  	pinMode(IN_EN[i], OUTPUT);
-  	digitalWrite(IN_EN[i], HIGH);
+  	pinMode(OE[i], OUTPUT);
+  	digitalWrite(OE[i], HIGH);
 	}
 
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
-	//lcd.print("Hello World");
 }
 
 char buffer[32];
@@ -353,9 +348,9 @@ char buffer[32];
 // Main loop function
 void loop() {
   // put your main code here, to run repeatedly:
-  opcode = get_data(0);
-  microstep = get_data(1);
-
+  opcode = get_data(1);
+  microstep = get_data(0);
+  
 	sprintf(buffer,"%s                ",Mnemonic[opcode]);
 	buffer[13]= 0;
 
@@ -367,11 +362,32 @@ void loop() {
 	lcd.print(microstep & 1);
   lcd.print("  ");
 
+	lcd.setCursor(12, 0);
+
+	if (digitalRead(IN[3]) == 0)
+		lcd.print("e");
+	else
+		lcd.print("E");
+
+	if (digitalRead(IN[2]) == 0)
+		lcd.print("s");
+	else
+		lcd.print("S");
+
+	if (digitalRead(IN[1]) == 0)
+		lcd.print("h");
+	else
+		lcd.print("H");
+
+	if (digitalRead(IN[0]) == 0)
+		lcd.print("f");
+	else
+		lcd.print("F");
+
  	write_hex(0, 1, opcode);
 
    // Print a message to the LCD.
   lcd.print(buffer);
 
-//delay(10);
   delay(250);
 }

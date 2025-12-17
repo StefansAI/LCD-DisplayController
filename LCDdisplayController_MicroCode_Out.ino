@@ -1,6 +1,25 @@
 // include the library code:
 #include <LiquidCrystal.h>
 
+// Input data pin definition array
+const int DIN[8] = { 0, 1, 2, 3, 4, 5, 6, 7 }; 
+
+// Pin definition for the additional input 0
+const int IN[4] = {A0, A1, A2, A3 };
+
+// LCD data output pins
+const int LCD_D[4] = { 8, 9, 10, 11 };
+
+// LCD enable pin
+const int LCD_E = 12;
+// LCD rs pin
+const int LCD_RS = 13;
+
+LiquidCrystal lcd(LCD_RS, LCD_E, LCD_D[0], LCD_D[1], LCD_D[2], LCD_D[3]);
+
+// Input buffer enable
+const int OE[2] = { 18, 19 };
+
 char* AddrEn[] = {
 //   12345678
 	"/PC_OUT_EN",
@@ -105,28 +124,6 @@ char* AluCode[] = {
 	"A"
 };
 
-// Input data pin definition array
-const int DIN[8] = { 0, 1, 2, 3, 4, 5, 6, 7 }; 
-
-// Pin definition for the additional input 0
-const int IN0 = 18;
-// Pin definition for the additional input 1
-const int IN1 = 19;
-
-// LCD data output pins
-const int LCD_D[4] = { 8, 9, 10, 11 };
-
-// LCD enable pin
-const int LCD_E = 12;
-// LCD rs pin
-const int LCD_RS = 13;
-
-// Input buffer enable
-const int OE[2] = { 16, 17 };
-
-
-LiquidCrystal lcd(LCD_RS, LCD_E, LCD_D[0], LCD_D[1], LCD_D[2], LCD_D[3]);
-
 // Query all data input bits and return the 8bit data value read from the input chip.
 int get_data(int idx)
 {
@@ -155,8 +152,8 @@ int cy_in = 0;
 // Initialization function called before the loop
 void setup() {
 	// put your setup code here, to run once:
-  // set up the LCD's number of columns and rows:
-  lcd.begin(20, 4);
+		for (int i = 0; i<4; i++)
+ 		pinMode(IN[i], INPUT);
 
 	for (int i = 0; i<8; i++)
   	pinMode(DIN[i], INPUT_PULLUP);
@@ -167,30 +164,29 @@ void setup() {
   	digitalWrite(OE[i], HIGH);
 	}
 
-  pinMode(IN0, INPUT_PULLUP);
-  pinMode(IN1, INPUT_PULLUP);
-
+  // set up the LCD's number of columns and rows:
+  lcd.begin(20, 4);
 }
 
 char buffer[64];
                  //12345678901234567890
-char* sformat = "%s                      ";
+char* sformat = "%s                     ";
 
 // Main loop function
 void loop() {
   // put your main code here, to run repeatedly:
-  int a = get_data(1);
-  int b = get_data(0);
+  int a = get_data(0);
+  int b = get_data(1);
 
   addr_en = a & 0x07;
   out_en = (a >> 3) & 0x1F;
   load_code = b & 0x0F;
   alu_code = (b >> 4) & 0x0F;
   
-  if (digitalRead(IN0) == HIGH)
+  if (digitalRead(IN[1]) == HIGH)
 		alu_code |= 1<<4;
 
-  if (digitalRead(IN1) == HIGH)
+  if (digitalRead(IN[2]) == HIGH)
 		cy_in = 0;
   else
 		cy_in = 1;
@@ -232,6 +228,6 @@ void loop() {
 		 lcd.print(cy_in);
 	}
 
-
-  delay(500);
+  delay(250);
 }
+

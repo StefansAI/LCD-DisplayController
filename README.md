@@ -33,6 +33,41 @@ The layout is made to plug in the two different sizes of LCD modules and to brea
 <br>
 <br>
 <div style="text-align: center;">
+  <img src="docs/assets/images/board.jpg" />
+</div>
+<br>
+The blank board as it came from <a href="www.PCBway.com">PCBway.</a>
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="docs/assets/images/board_assembled_no_LCD_16x2.jpg" />
+</div>
+<br>
+Board broken off and assembled for LCD 16x2.
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="docs/assets/images/board_assembled_LCD_16x2.jpg" />
+</div>
+<br>
+Board fully assembled with LCD 16x2.
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="docs/assets/images/board_assembled_no_LCD_20x4.jpg" />
+</div>
+<br>
+Board assembled for LCD 20x4.
+<br>
+<br>
+<div style="text-align: center;">
+  <img src="docs/assets/images/board_assembled_LCD_20x4.jpg" />
+</div>
+<br>
+Board fully assembled with LCD 20x4.
+<br>
+<br>
+<div style="text-align: center;">
   <img src="docs/assets/images/microcode_in.png" />
 </div>
 <br>
@@ -44,4 +79,4 @@ Similar to the <a href="https://github.com/StefansAI/HexDisplayController">HexDi
 </div>
 <br>
 The second screenshot shows string definitions for the micro code output signals.<br>
-<br><br>
+
