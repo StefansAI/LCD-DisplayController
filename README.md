@@ -29,14 +29,14 @@ Another 4-bit header was added to include reading in more bits that are currentl
   <img src="docs/assets/images/layout.png" />
 </div>
 <br>
-The layout is made to plug in the two different sizes of LCD modules and to break off the part only needed for the larger module. The PCB had been made at <a href="www.PCBway.com">PCBway.</a>
+The layout is made to plug in the two different sizes of LCD modules and to break off the part only needed for the larger module. The PCB had been made at <a href="www.PCBway.com">PCBway.</a> It was easy to upload the gerbers, get a quote and order the samples. The shipment took just few days.
 <br>
 <br>
 <div style="text-align: center;">
   <img src="docs/assets/images/board.jpg" />
 </div>
 <br>
-The blank board as it came from <a href="www.PCBway.com">PCBway.</a>
+The blank board as it came from <a href="www.PCBway.com">PCBway.</a> The quality was good and it worked right away as usual.
 <br>
 <br>
 <div style="text-align: center;">
